@@ -1,15 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-
-const TagButton = (tagName) => (
-  <span className="tag">{tagName}</span>
-);
-
-const TagContainer = ({tags}) => (
-  <span className="article-tag-container">
-    File under: {tags.map(TagButton)}
-  </span>
-)
+import BlogHeader from "../components/blog-header";
 
 export default function Template({
   data 
@@ -19,11 +10,7 @@ export default function Template({
     <div className="blog-post-container">
      <Helmet title={`frye.codes - ${post.frontmatter.title}`} />
       <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
-        <div className="article-header">
-          <TagContainer tags={post.frontmatter.tags} />
-          <span className="article-publish-date">{post.frontmatter.date}</span>
-        </div>
+        <BlogHeader {...post.frontmatter} />
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.html }}

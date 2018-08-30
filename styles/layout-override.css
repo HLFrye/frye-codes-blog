@@ -131,3 +131,23 @@ p, div {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
+
+.blog-post-preview-title {
+    text-decoration: none;
+    color: #000;
+}
+
+.blog-post-preview-date {
+    font-size: x-small;
+    color: #444;
+}
+
+/* 
+.blog-post-preview {
+
+}
+
+.blog-post-preview-text {
+
+}
+*/
