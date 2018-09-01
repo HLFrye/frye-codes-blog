@@ -1,9 +1,18 @@
 import React from "react";
 import Link from "gatsby-link";
+import _ from "lodash"
 
-const TagButton = (tagName) => (
-  <span className="tag">{tagName}</span>
-);
+const TagButton = (tagName) => {
+  const tagLink = `/tags/${_.kebabCase(tagName)}`;
+
+  return (
+    <span className="tag">
+      <Link to={tagLink} className="tagLink">
+        {tagName}
+      </Link>    
+    </span>
+  );
+}
 
 const TagContainer = ({tags}) => (
   <span className="article-tag-container">

@@ -142,6 +142,9 @@ p, div {
     color: #444;
 }
 
+.tagLink {
+    text-decoration: none;
+}
 /* 
 .blog-post-preview {
 
