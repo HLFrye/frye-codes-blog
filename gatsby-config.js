@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'frye.codes',
+    description: "Harvey Frye's coding blog",
+    siteUrl: "https://frye.codes",
     social: [
       {name: "About", icon: "fa-info", url: "/about"},
       {name: "GitHub", icon: "fa-github", url: "https://github.com/HLFrye"},
@@ -10,6 +12,7 @@ module.exports = {
     ]
   },
   plugins: [
+    `gatsby-plugin-feed`,
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-catch-links`,
     {
@@ -43,6 +46,18 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-125184089-1",
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true
+      },
+    },
   ],
 }

@@ -2,7 +2,7 @@
 [*] Create /about page
 [*] Create tags pages
 [ ] Create sidebar
-[ ] Add disqus
-[ ] Add analytics
-[ ] RSS feed?
+[ ] Add disqus (or alternative like gitment)
+[*] Add analytics
+[*] RSS feed?
 [ ] Publish
