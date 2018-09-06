@@ -1,11 +1,18 @@
 import React from "react";
 import Helmet from "react-helmet";
 import BlogHeader from "../components/blog-header";
+import { DiscussionEmbed } from "disqus-react";
 
 export default function Template({
   data 
 }) {
   const post = data.markdownRemark; 
+  const disqusShortname = "frye-codes";
+  const disqusConfig = {
+    identifier: post.id,
+    title: post.frontmatter.title,
+  };
+
   return (
     <div className="blog-post-container">
      <Helmet title={`frye.codes - ${post.frontmatter.title}`} />
@@ -15,6 +22,7 @@ export default function Template({
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </div>
     </div>
   );
