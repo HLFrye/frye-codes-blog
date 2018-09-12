@@ -7,7 +7,6 @@ html {
 }
 body {
     height: 100%;
-    border: 5px solid #ffdb3a;
 }
 h1 {
     font-size: 1.5rem;
@@ -145,11 +144,13 @@ p, div {
 .tagLink {
     text-decoration: none;
 }
-/* 
-.blog-post-preview {
-
+ 
+.blog-post-preview hr {
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
+/*
 .blog-post-preview-text {
 
 }

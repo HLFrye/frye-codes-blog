@@ -8,6 +8,12 @@ import '../../styles/layout-override.css';
 import '../../styles/font-awesome.css';
 import "prismjs/themes/prism-dark.css";
 
+import icon16 from "./favicon-16x16.png";
+import icon32 from './favicon-32x32.png';
+//import manifest from './site.webmanifest';
+import maskIcon from "./safari-pinned-tab.svg"; 
+import appleTouchIcon from "./apple-touch-icon.png";
+
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
@@ -15,8 +21,16 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+        { name: "msapplication-TileColor", content: "#da532c"},
+        { name: "theme-color", content: "#ffffff"}, 
       ]}
-    />
+    >
+      <link rel="apple-touch-icon" sizes="180x180" href={`${appleTouchIcon}`} />
+      <link rel="icon" type="image/png" sizes="32x32" href={`${icon32}`} />
+      <link rel="icon" type="image/png" sizes="16x16" href={`${icon16}`} />
+      {/* <link rel="manifest" href={`${manifest}`} /> */}
+      <link rel="mask-icon" href={`${maskIcon}`} color="#5bbad5" />
+    </Helmet>
     <div className="container">
       <Header siteTitle={data.site.siteMetadata.title} socialLinks={data.site.siteMetadata.social} />
       <div className="body">

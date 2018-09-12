@@ -26,20 +26,20 @@ export default function Index({ data }) {
   
   return (
     <div className="blog-posts">
-      <h1>Recent posts:</h1>
-      
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => {
-          return (
-            <div className="blog-post-preview" key={post.id}>
-              <BlogHeader {...post.frontmatter} link={post.frontmatter.path} />
-              <p className="blog-post-preview-text">{FormatExcerpt(post.excerpt, post.html)}</p>
-              <Link to={post.frontmatter.path}>Read more</Link>
-              <hr />
-            </div>
-          );
-        })}
+      <div className="posts-container">      
+        {posts
+          .filter(post => post.node.frontmatter.title.length > 0)
+          .map(({ node: post }) => {
+            return (
+              <div className="blog-post-preview" key={post.id}>
+                <BlogHeader {...post.frontmatter} link={post.frontmatter.path} />
+                <p className="blog-post-preview-text">{FormatExcerpt(post.excerpt, post.html)}</p>
+                <Link to={post.frontmatter.path}>Read more</Link>
+                <hr />
+              </div>
+            );
+          })}
+        </div>
     </div>
   );
 }
