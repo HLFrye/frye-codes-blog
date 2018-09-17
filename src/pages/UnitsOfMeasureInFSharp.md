@@ -1,6 +1,6 @@
 ---
 path: "/units-of-measure"
-date: "2018-08-27T23:53:20.729Z"
+date: "2018-09-15T23:53:20.729Z"
 title: "F# Units of Measure for Financial Applications"
 tags: ["F#", "Units of Measure"]
 summary: "Demonstrates the use of the Units of Measure functionality in F#"
