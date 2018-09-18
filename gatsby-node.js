@@ -1,5 +1,17 @@
 const _ = require('lodash')
 const path = require('path');
+
+exports.onCreateNode = ({ node, boundActionCreators }) => {
+  const { createNodeField } = boundActionCreators
+  if (node.internal.type === 'MarkdownRemark') {
+    createNodeField({
+      node,
+      name: 'slug',
+      value: path.basename(node.frontmatter.path, '.md'),
+    });
+  }
+}
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
     const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
