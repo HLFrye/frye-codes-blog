@@ -6,8 +6,12 @@
 [*] Add disqus 
 [*] Add analytics
 [*] RSS feed?
-[ ] Edit and improve Units of Measure article
-[ ] Publish
+[*] Edit and improve Units of Measure article
+[*] Publish
+
+[ ] Fix small formatting issues on UoM article
+[ ] Update template so that build number/commit ID is in the footer
+[ ] Update build process to remove stale files
 
 
 ---- Future ----
