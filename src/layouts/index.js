@@ -36,6 +36,15 @@ const Layout = ({ children, data }) => (
       <div className="body">
         {children()}
       </div>
+      <div className="footer">
+        <hr />
+        <span id="build-date">
+          Built: {data.site.siteMetadata.buildDate}
+        </span>
+        <span id="build-commit">
+          Commit: {data.site.siteMetadata.commitId}
+        </span>
+      </div>
     </div>
   </div>
 )
@@ -51,6 +60,8 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        commitId
+        buildDate
         social {
           name
           url

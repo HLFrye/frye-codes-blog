@@ -155,3 +155,27 @@ p, div {
 
 }
 */
+
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.footer hr {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.footer span {
+    color: #444;
+    font-size: small;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* 
+#build-commit {
+
+} */
+

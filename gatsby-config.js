@@ -1,8 +1,11 @@
+const process = require('process');
 module.exports = {
   siteMetadata: {
     title: 'frye.codes',
     description: "Harvey Frye's coding blog",
     siteUrl: "https://frye.codes",
+    commitId: `${process.env.Build_SourceVersion || "Development"}`,
+    buildDate: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
     social: [
       {name: "About", icon: "fa-info", url: "/about"},
       {name: "GitHub", icon: "fa-github", url: "https://github.com/HLFrye"},
