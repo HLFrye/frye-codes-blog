@@ -38,12 +38,14 @@ const Layout = ({ children, data }) => (
       </div>
       <div className="footer">
         <hr />
-        <span id="build-date">
-          Built: {data.site.siteMetadata.buildDate}
-        </span>
-        <span id="build-commit">
-          Commit: {data.site.siteMetadata.commitId}
-        </span>
+        <center>
+          <span id="build-date">
+            Built: {data.site.siteMetadata.buildDate}
+          </span>
+          <span id="build-commit">
+            Commit: {data.site.siteMetadata.commitId}
+          </span>
+        </center>
       </div>
     </div>
   </div>

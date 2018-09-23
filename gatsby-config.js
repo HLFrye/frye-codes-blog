@@ -1,10 +1,15 @@
 const process = require('process');
+
+const commitId = process.env.BUILD_SOURCEVERSION ?
+  process.env.BUILD_SOURCEVERSION.substring(0,8) :
+  "Development";
+
 module.exports = {
   siteMetadata: {
     title: 'frye.codes',
     description: "Harvey Frye's coding blog",
     siteUrl: "https://frye.codes",
-    commitId: `${process.env.BUILD_SOURCEVERSION || "Development"}`,
+    commitId,
     buildDate: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
     social: [
       {name: "About", icon: "fa-info", url: "/about"},
