@@ -9,10 +9,12 @@
 [*] Edit and improve Units of Measure article
 [*] Publish
 
-[ ] Fix small formatting issues on UoM article
-[ ] Update template so that build number/commit ID is in the footer
-[ ] Update build process to remove stale files
-
+[*] Fix small formatting issues on UoM article
+[*] Update template so that build number/commit ID is in the footer
+[*] Update build process to better work with CloudFront distribution:
+    * Needs to set a prefix and update that prefix in distribution
+[ ] More work on design.  Tweak fonts and spacing.
+[ ] Make design work on mobile
 
 ---- Future ----
 [ ] Consider full redesign
