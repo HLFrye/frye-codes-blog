@@ -5,7 +5,7 @@ async function updateDistribution({cloudFrontId, path}) {
   const distribution = await cloudFront.getDistributionConfig({Id: cloudFrontId}).promise();
   const etag = distribution.ETag;
   delete distribution.ETag;
-  distribution.DistributionConfig.Origins.Items[0].OriginPath = path + "/";
+  distribution.DistributionConfig.Origins.Items[0].OriginPath = "/" + path;
   distribution.IfMatch = etag;
   distribution.Id = cloudFrontId;
   const updateResult = await cloudFront.updateDistribution(distribution).promise();
