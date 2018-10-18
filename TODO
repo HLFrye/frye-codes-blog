@@ -19,4 +19,7 @@
 ---- Future ----
 [ ] Consider full redesign
 
-
+---- Post Ideas ----
+[ ] How I build this blog
+[ ] Converting JSON for a type provider
+[ ] F# Game of Life (feat. a sparse matrix and gui.cs)
