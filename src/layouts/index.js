@@ -14,6 +14,8 @@ import icon32 from './favicon-32x32.png';
 import maskIcon from "./safari-pinned-tab.svg"; 
 import appleTouchIcon from "./apple-touch-icon.png";
 
+
+
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
@@ -31,22 +33,20 @@ const Layout = ({ children, data }) => (
       {/* <link rel="manifest" href={`${manifest}`} /> */}
       <link rel="mask-icon" href={`${maskIcon}`} color="#5bbad5" />
     </Helmet>
-    <div className="container">
-      <Header siteTitle={data.site.siteMetadata.title} socialLinks={data.site.siteMetadata.social} />
-      <div className="body">
-        {children()}
-      </div>
-      <div className="footer">
-        <hr />
-        <center>
-          <span id="build-date">
-            Built: {data.site.siteMetadata.buildDate}
-          </span>
-          <span id="build-commit">
-            Commit: {data.site.siteMetadata.commitId}
-          </span>
-        </center>
-      </div>
+    <Header siteTitle={data.site.siteMetadata.title} socialLinks={data.site.siteMetadata.social} />
+    <div className="body">
+      {children()}
+    </div>
+    <div className="footer">
+      <hr />
+      <center>
+        <span id="build-date">
+          Built: {data.site.siteMetadata.buildDate}
+        </span>
+        <span id="build-commit">
+          Commit: {data.site.siteMetadata.commitId}
+        </span>
+      </center>
     </div>
   </div>
 )
