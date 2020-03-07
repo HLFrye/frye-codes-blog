@@ -4,14 +4,35 @@ import SocialButton from './social-contact'
 
 const Header = ({ siteTitle, socialLinks }) => (
   <div className="header">
-    <span className="title">
+    <div className="title">
       <Link to="/" className="home-link">
-        {siteTitle}
+        Hi, I'm Frye
       </Link>
-    </span>
-    <span className="fa-2x social-container">
+    </div>
+    <div className="about">
+      Blogging about programming
+    </div>
+    <div className="headerLink">
+      <Link to="/" className="home-link">
+        Home
+      </Link>
+    </div>
+    <hr className="headerDivider" />
+    <div className="headerLink">
+      <Link to="/about" className="home-link">
+        About Me
+      </Link>
+    </div>
+    <hr className="headerDivider" />
+    <div className="headerLink">
+      <Link to="/tags" className="home-link">
+        Tagged Posts
+      </Link>
+    </div>
+    <hr className="headerDivider" />        
+    <div className="fa-2x social-container">
       {socialLinks.map(SocialButton)}
-    </span>
+    </div>
   </div>
 )
 

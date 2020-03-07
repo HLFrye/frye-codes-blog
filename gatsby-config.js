@@ -12,7 +12,6 @@ module.exports = {
     commitId,
     buildDate: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
     social: [
-      {name: "About", icon: "fa-info", url: "/about"},
       {name: "GitHub", icon: "fa-github", url: "https://github.com/HLFrye"},
       {name: "Linked In", icon: "fa-linkedin-square", url: "https://www.linkedin.com/in/harvey-frye-codes"},
       {name: "Twitter", icon: "fa-twitter", url: "https://twitter.com/Frye"},
