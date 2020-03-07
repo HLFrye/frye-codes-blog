@@ -34,19 +34,10 @@ const Layout = ({ children, data }) => (
       <link rel="mask-icon" href={`${maskIcon}`} color="#5bbad5" />
     </Helmet>
     <Header siteTitle={data.site.siteMetadata.title} socialLinks={data.site.siteMetadata.social} />
-    <div className="body">
-      {children()}
-    </div>
-    <div className="footer">
-      <hr />
-      <center>
-        <span id="build-date">
-          Built: {data.site.siteMetadata.buildDate}
-        </span>
-        <span id="build-commit">
-          Commit: {data.site.siteMetadata.commitId}
-        </span>
-      </center>
+    <div className="bodyWrapper">
+      <div className="body">
+        {children()}
+      </div>
     </div>
   </div>
 )
