@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Img from "gatsby-image";
 import Helmet from "react-helmet";
 import BlogHeader from "../components/blog-header";
 
@@ -33,6 +34,7 @@ export default function Index({ data }) {
           .map(({ node: post }) => {
             return (
               <div className="blog-post-preview" key={post.id}>
+                <Img fixed={post.frontmatter.previewImage.fixed} />
                 <p>hi</p>
                 <BlogHeader {...post.frontmatter} link={post.frontmatter.path} />
                 <p className="blog-post-preview-text">{FormatExcerpt(post.excerpt, post.html)}</p>
@@ -60,6 +62,15 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             tags
+            previewImage {
+              relativePath
+              childImageSharp
+              {
+                fixed(width: 125, height: 125) {
+                  ...GatsbyImageSharpFixed
+                } 
+              }
+            }
           }
         }
       }
