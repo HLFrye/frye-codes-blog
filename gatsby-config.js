@@ -19,7 +19,6 @@ module.exports = {
     ]
   },
   plugins: [
-    `gatsby-plugin-feed`,
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-catch-links`,
     {
@@ -30,6 +29,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -53,18 +53,6 @@ module.exports = {
           }
         ]
       }
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-125184089-1",
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true
-      },
-    },
+    }
   ],
 }
