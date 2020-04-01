@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
-import Helmet from "react-helmet";
 import BlogHeader from "../components/blog-header";
+import { graphql } from "gatsby"
 
 //import '../styles/blog-listing.css';
 

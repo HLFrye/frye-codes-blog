@@ -1,8 +1,8 @@
 const _ = require('lodash')
 const path = require('path');
 
-exports.onCreateNode = ({ node, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
   if (node.internal.type === 'MarkdownRemark') {
     createNodeField({
       node,
@@ -12,8 +12,8 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   }
 }
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
     const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
     const tagTemplate = path.resolve(`src/templates/tags.js`);
     return graphql(`{

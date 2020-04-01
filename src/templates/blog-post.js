@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import BlogHeader from "../components/blog-header";
+import { graphql } from "gatsby"
 
 export default function Template({
   data 

@@ -14,9 +14,30 @@ import icon32 from './favicon-32x32.png';
 import maskIcon from "./safari-pinned-tab.svg"; 
 import appleTouchIcon from "./apple-touch-icon.png";
 
+import { StaticQuery, graphql } from "gatsby"
+
+const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+        commitId
+        buildDate
+        social {
+          name
+          url
+          icon
+        }
+      }
+    }
+  }
+`
 
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={query}
+    render={data => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -36,10 +57,12 @@ const Layout = ({ children, data }) => (
     <Header siteTitle={data.site.siteMetadata.title} socialLinks={data.site.siteMetadata.social} />
     <div className="bodyWrapper">
       <div className="body">
-        {children()}
+        {children}
       </div>
     </div>
   </div>
+    )}
+  />
 )
 
 Layout.propTypes = {
@@ -47,20 +70,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-        commitId
-        buildDate
-        social {
-          name
-          url
-          icon
-        }
-      }
-    }
-  }
-`
