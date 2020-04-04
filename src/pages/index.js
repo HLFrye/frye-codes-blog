@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import BlogHeader from "../components/blog-header";
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 //import '../styles/blog-listing.css';
 
@@ -33,7 +34,7 @@ export default function Index({ data }) {
           .map(({ node: post }) => {
             return (
               <div className="blog-post-preview" key={post.id}>
-                <p>hi</p>
+                <Img fixed={post.frontmatter.headerImg.childImageSharp.fixed} />
                 <BlogHeader {...post.frontmatter} link={post.frontmatter.path} />
                 <p className="blog-post-preview-text">{FormatExcerpt(post.excerpt, post.html)}</p>
                 <Link to={post.frontmatter.path}>Read more</Link>
@@ -60,6 +61,15 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             tags
+            headerImg {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 125, height: 125) {
+                  ...GatsbyImageSharpFixed
+                }
+              }  
+            }
           }
         }
       }

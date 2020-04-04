@@ -4,6 +4,7 @@ date: "2018-08-27T02:23:19.086Z"
 title: "Twenty Four Solver in F#"
 tags: ["F#", "Math"]
 summary: "Presents a F# based solver for the Twenty Four game"
+headerImg: "brian-erickson-754641-unsplash.jpg"
 ---
 
 ![Kill some time on a road trip with math!](brian-erickson-754641-unsplash.jpg)
