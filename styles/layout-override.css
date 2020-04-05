@@ -69,7 +69,7 @@ p, div {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .header {
         height: 100%; /* Full-height: remove this if you want "auto" height */
         width: 160px; /* Set the width of the sidebar */
@@ -204,9 +204,15 @@ p, div {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 1000px) {
+    .header .nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
     .header {
-        background: #f00;
+        background-color: rgb(26, 14, 28);
         color: #ffffff;
         vertical-align: center;
         height: 140px;
@@ -214,20 +220,33 @@ p, div {
     }
 
     .header .title {
-        position: absolute;
-        left: 50px;
         margin: auto;
-        top: 0;
-        bottom: 0;
         font-size: xx-large;
         font-family: 'Ubuntu', sans-serif;
         text-align: center;
         line-height: 40px;
         vertical-align: middle;
         height: 40px;
+        padding-top: 10px;
     }
-    
-    .header .social-container {
+
+    .header .about {
+        margin: auto;
+        font-size: large;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        line-height: 30px;
+        vertical-align: middle;
+        height: 30px;
+        padding-top: 10px;
+    }
+
+    .header .headerLink {
+        display: none;
+    }
+
+        .header .social-container {
+        display: none;
         position: absolute;
         padding-right: 10px;
         text-align: right;
@@ -246,7 +265,7 @@ p, div {
     }
     
     .header .social-button-background {
-        color: #0c590f;
+        color: rgb(26, 14, 28);
     }
 
     .body {

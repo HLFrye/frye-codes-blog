@@ -7,6 +7,7 @@ import './index.css'
 import '../../styles/layout-override.css';
 import '../../styles/font-awesome.css';
 import "prismjs/themes/prism-dark.css";
+import "../../styles/hamburger.css";
 
 import icon16 from "./favicon-16x16.png";
 import icon32 from './favicon-32x32.png';

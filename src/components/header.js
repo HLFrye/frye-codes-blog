@@ -12,6 +12,12 @@ const Header = ({ siteTitle, socialLinks }) => (
     <div className="about">
       Blogging about programming
     </div>
+    <div className="nav">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div className="headerLink">
       <Link to="/" className="home-link">
         Home
