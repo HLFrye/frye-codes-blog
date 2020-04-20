@@ -21,7 +21,7 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
-        width: 35px;
+        width: 32px;
         height: 4px;
         margin-bottom: 5px;
         position: relative;
@@ -49,13 +49,14 @@
     .header .nav input:checked ~ span
     {
       opacity: 1;
-      transform: rotate(-45deg) translate(-2px, -1px);
+      /* transform: rotate(-45deg) translate(-2px, -1px); */
+      transform: rotate(-45deg);
     }
     
     /*
      * But let's hide the middle one.
      */
-    .header .nav input:checked ~ span:nth-last-child(2)
+    .header .nav input:checked ~ span:nth-last-child(3)
     {
       opacity: 0;
       transform: rotate(0deg) scale(0.2, 0.2);
@@ -64,11 +65,24 @@
     /*
      * Ohyeah and the last one should go the other direction
      */
-    .header .nav input:checked ~ span:nth-last-child(3)
+    .header .nav input:checked ~ span:nth-last-child(4)
     {
-      transform: rotate(45deg) translate(0, -1px);
+      /* transform: rotate(45deg) translate(0, -1px); */
+      transform: rotate(45deg);
     }
-       
+
+    .header .nav .menu {
+        display: none;
+    }
+
+    .header .nav input:checked ~ .menu {
+        display: block;
+        position: relative;
+        top: -32px;
+        background-color: rgb(26, 14, 28);
+    }
+
+
     /* .header .nav {
         display: inline;
         margin: auto;

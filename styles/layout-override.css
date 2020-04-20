@@ -215,7 +215,7 @@ p, div {
         background-color: rgb(26, 14, 28);
         color: #ffffff;
         vertical-align: center;
-        height: 140px;
+        /* height: 140px; */
         position: relative;
     }
 
@@ -241,12 +241,7 @@ p, div {
         padding-top: 10px;
     }
 
-    .header .headerLink {
-        display: none;
-    }
-
-        .header .social-container {
-        display: none;
+    .header .social-container {
         position: absolute;
         padding-right: 10px;
         text-align: right;

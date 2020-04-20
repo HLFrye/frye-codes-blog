@@ -17,27 +17,30 @@ const Header = ({ siteTitle, socialLinks }) => (
       <span></span>
       <span></span>
       <span></span>
-    </div>
-    <div className="headerLink">
-      <Link to="/" className="home-link">
-        Home
-      </Link>
-    </div>
-    <hr className="headerDivider" />
-    <div className="headerLink">
-      <Link to="/about" className="home-link">
-        About Me
-      </Link>
-    </div>
-    <hr className="headerDivider" />
-    <div className="headerLink">
-      <Link to="/tags" className="home-link">
-        Tagged Posts
-      </Link>
-    </div>
-    <hr className="headerDivider" />        
-    <div className="fa-2x social-container">
-      {socialLinks.map(SocialButton)}
+      <div className="menu">
+        <div className="headerLink">
+        <Link to="/" className="home-link">
+          Home
+        </Link>
+        </div>
+        <hr className="headerDivider" />
+        <div className="headerLink">
+          <Link to="/about" className="home-link">
+            About Me
+          </Link>
+        </div>
+        <hr className="headerDivider" />
+        <div className="headerLink">
+          <Link to="/tags" className="home-link">
+            Tagged Posts
+          </Link>
+        </div>
+        <hr className="headerDivider" />        
+        <div className="fa-2x social-container">
+          {socialLinks.map(SocialButton)}
+        </div>
+      </div> 
+
     </div>
   </div>
 )
