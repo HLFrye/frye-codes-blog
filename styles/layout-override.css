@@ -240,19 +240,38 @@ p, div {
         height: 30px;
         padding-top: 10px;
     }
+    
+    .body {
+        font-size: 1.4rem;
+        line-height: 1.58;
+        font-family: 'Noto Sans', sans-serif;
+        padding: 10px;
+    }
+
+    .headerLink {
+        text-align: center;
+        margin: auto;
+        font-size: large;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .header hr {
+        background-color: #fff;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        vertical-align: middle;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 
     .header .social-container {
-        position: absolute;
-        padding-right: 10px;
-        text-align: right;
-        float: right;
-        right: 10px;
-        bottom: 0;
-        top: 0;
+        text-align: center;
         margin: auto;
         line-height: 40px;
-        vertical-align: middle;
         height: 60px;
+        
     }
     
     .header .social-container i {
@@ -263,12 +282,6 @@ p, div {
         color: rgb(26, 14, 28);
     }
 
-    .body {
-        font-size: 1.4rem;
-        line-height: 1.58;
-        font-family: 'Noto Sans', sans-serif;
-        padding: 10px;
-    }
         
 }
 

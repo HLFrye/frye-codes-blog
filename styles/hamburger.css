@@ -17,7 +17,7 @@
         z-index: 2;
     }
 
-    .header .nav span {
+    .header .nav > span {
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -38,11 +38,11 @@
                     opacity 0.55s ease;
     }
 
-    .header .nav span:first-child {
+    .header .nav > span:first-child {
         transform-origin: 0% 0%;
     }
 
-    .header .nav span:nth-last-child(2) {
+    .header .nav > span:nth-last-child(2) {
         transform-origin: 0% 100%; 
     } 
 
