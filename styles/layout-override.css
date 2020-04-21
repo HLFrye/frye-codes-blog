@@ -205,7 +205,10 @@ p, div {
 }
 
 @media screen and (min-width: 1000px) {
-    .header .nav {
+    .header .nav > input {
+        display: none;
+    }
+    .header .nav > span {
         display: none;
     }
 }
