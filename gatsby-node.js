@@ -4,10 +4,11 @@ const path = require('path');
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === 'MarkdownRemark') {
+    let fixed_path = node.frontmatter.path.substring(0, node.frontmatter.path.length - 11);
     createNodeField({
       node,
       name: 'slug',
-      value: path.basename(node.frontmatter.path, '.md'),
+      value: path.basename(fixed_path, '.md'),
     });
   }
 }
@@ -43,9 +44,11 @@ exports.createPages = ({ actions, graphql }) => {
       const posts = result.data.allMarkdownRemark.edges
       posts.forEach(({ node }) => {
           createPage({
-            path: node.frontmatter.path,
+            path: `${node.frontmatter.path}`,
             component: blogPostTemplate,
-            context: {} // additional data can be passed via context
+            context: {
+              postPath: node.frontmatter.path
+            } // additional data can be passed via context
           });
         });
   

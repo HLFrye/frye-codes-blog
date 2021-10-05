@@ -34,7 +34,7 @@ export default function Index({ data }) {
             .map(({ node: post }) => {
               return (
                 <div className="blog-post-preview" key={post.id}>
-                  <Link to={post.frontmatter.path}>
+                  <Link to={post.frontmatter.path+"/index.html"}>
                     <Img fluid={post.frontmatter.headerImg.childImageSharp.fluid} />
                     <h1>{post.frontmatter.title}</h1>
                   </Link>
