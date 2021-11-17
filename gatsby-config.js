@@ -15,7 +15,7 @@ module.exports = {
       {name: "GitHub", icon: "fa-github", url: "https://github.com/HLFrye"},
       {name: "Linked In", icon: "fa-linkedin-square", url: "https://www.linkedin.com/in/harvey-frye-codes"},
       {name: "Twitter", icon: "fa-twitter", url: "https://twitter.com/Frye"},
-      {name: "Email", icon: "fa-envelope", url: "mailto:harvey@frye.codes"}    
+//      {name: "Email", icon: "fa-envelope", url: "mailto:harvey@frye.codes"},
     ]
   },
   plugins: [
